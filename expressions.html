@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // console.log('HELLO?')
+    // Expressions
+
+    // What is an expression?
+    // An expression is a statement that evaluates to a value
+
+    // console.log(5 + 5)
+
+    // not an expression, but it is a statement
+    // if(true){
+    //     console.log('hello')
+    // }
+
+    // RULE OF THUMB:
+    // if you can assign it to a variable, it is an expression
+
+
+    // A lot of expression use operators
+
+    const number = 5 + 87
+    const over18 = number > 18
+    const drinksPresent = true
+    const canWeDrink = over18 && drinksPresent
+
+    // console.log('PARTYTIME?', canWeDrink)
+
+    // Types of operators
+    // MATH +, -, /, *
+    // COMPARISON === >, >= etc.
+    // LOGICAL &&, ||, !
+    // Javascript specific typeof, instanceof
+
+
+    // Calling a method on a string is also an expression
+    const enthousiasticGreeting = 'hello'.toUpperCase()
+
+
+    // function expression, evaluates to a function
+    const sayHelloToMyLittleFriend = function(greeting){
+        console.log(greeting)
+    } 
+
+    // console.log('WHAT IS SAY HELLO?', sayHelloToMyLittleFriend)
+
+    // sayHelloToMyLittleFriend('You cockroaches')
+    // console.log(enthousiasticGreeting)
+
+    // WEIRD THINGS WITH OPERATORS
+
+    // "value", "datatype"
+    // loose comparison
+    // const same = '5' == 5
+
+    // strict comparison
+    const same = '5' === 5
+
+    // console.log('SAME', same)
+
+    // TYPE COERCION
+    // console.log('hello ' + 'world')
+    // console.log('5' + 5) // 55
+
+    // fix by converting the data to the same datatype
+    // console.log(parseInt('5') + 5)
+
+    // console.log('CHANGED ORDER?', 5 + '5')
+
+    const userName = null
+
+    Boolean(!userName) // true
+    Boolean(userName) // false
+
+    if(userName === null){
+        console.log('Hello stranger')
+    } else {
+        console.log('Hello ' + userName)
+    }
+
+
+</script>
+</html>
