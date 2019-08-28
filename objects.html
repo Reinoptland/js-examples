@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    console.log('Hello')
+
+    // objects why should you use them?
+    // grouping data that belongs together
+    // you can add behaviour that is associated with the data
+    
+    // syntax
+    // - curly braces
+    // - key, value pairs (seperated by a comma)
+    // - accessing properties object.property (most common)
+    // - or user["firstName"] (bracket notation, if you are doing things with variables)
+    const user = {
+        firstName: 'Rein',
+        lastName: 'Optland',
+        // you can nest objects
+        adress: {
+            street: 'Postjesweg'
+        },
+        lesson: 'Check yourself :)',
+        teach: function (){
+            console.log('Value of THIS', this)
+            console.log(this.lesson)
+        },
+        teachingArrow: () => {
+            console.log('pew', this)
+        }
+
+    }
+
+    // we are calling teach in the context of user
+    user.teach()
+    user.teachingArrow()
+
+    const teachingFunction = user.teach
+    console.log(teachingFunction)
+
+    teachingFunction()
+
+    // console.log(user)
+    // accessing nested object
+    // console.log(user.adress.street)
+
+    // Bracket notation
+    // const propertyIwantToConsoleLog = "firstName"
+
+    // console.log(user[propertyIwantToConsoleLog])
+
+    // curly braces used as a block, be careful, not the same as object
+    // function something(){
+
+    // }
+
+    const arrowFunction = () => {
+        console.log('ARROW!')
+    }
+
+    arrowFunction()
+</script>
+</html>
